@@ -75,6 +75,7 @@ nav a.active
 
         margin-top: 50px;
         font-size: 12px;
+         flex-basis: 100%;
     }
 }
 .container .card
