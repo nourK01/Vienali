@@ -118,7 +118,10 @@ nav a.active
 {
 	background: #50ce04; 
 }
-
+#bottle-2:before 
+{
+	background: #ff2c30; 
+}
 
 .container .card:hover:before 
 { 
@@ -142,6 +145,15 @@ clip-path: circle(300px at 80% -20% );
 	content: 'Grape';
 	}
 #can-2:after 
+{ 
+	content: 'pomeg-\Aranate';
+    white-space: pre;
+	font-size: 7em ;
+	align-items: center;
+	left: -5%;
+	top: 20% ;
+	}
+	#cbottle-2:after 
 { 
 	content: 'pomeg-\Aranate';
     white-space: pre;
@@ -198,6 +210,14 @@ clip-path: circle(300px at 80% -20% );
  	transform: translate(-50%,-50%) rotate(-25deg);
  	width: 270px; 
 } 
+.container .card .imgBx #bottle2 
+{ 
+	position: absolute; 
+	top: 30%; 
+	left: 48%; 
+	transform: translate(-50%,-50%) rotate(-25deg);
+	width: 270px; 
+} 
 .container .card .contentBx 
 { 
 	 position: absolute;
@@ -238,6 +258,9 @@ clip-path: circle(300px at 80% -20% );
  #bottle1{
  	scale:0.5;
  }
+ #bottle2{
+	scale:0.5;
+}
 .container .card .description
 {
 	 position: absolute;
