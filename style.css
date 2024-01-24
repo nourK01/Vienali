@@ -74,6 +74,13 @@ nav a.active
     .container .card {
         width: calc(50% - 10px); /* Adjusts for two cards per row on smaller screens */
     }
+
+	.container .card:after  
+{ 
+	
+	transform: translateX(25%);
+} 
+ 
 }
 
 @media screen and (max-width: 375px) {
@@ -83,6 +90,12 @@ nav a.active
         font-size: 12px;
         flex-basis: 100%;
     }
+	.container .card :after 
+	{ 
+
+		transform: translateX(25%);
+	}
+
 }
 .container .card
  { 
@@ -153,7 +166,11 @@ clip-path: circle(300px at 80% -20% );
 	left: -5%;
 	top: 20% ;
 	}
-	#bottle-2:after 
+#bottle-1:after 
+{ 
+	content: 'Grape';
+	}
+		#bottle-2:after 
 { 
 	content: 'pomeg-\Aranate';
     white-space: pre;
@@ -163,10 +180,7 @@ clip-path: circle(300px at 80% -20% );
 	top: 20% ;
 	}
 
-#bottle-1:after 
-{ 
-	content: 'Grape';
-	}	
+	
 .container .card .imgBx
  { 
 	position: absolute; 
@@ -285,17 +299,18 @@ clip-path: circle(300px at 80% -20% );
 .container .card .fruit
 {
 	 position: absolute;
-	 bottom: -300px;
-	 right: 10px;
+	 bottom: -10px;
 	 transition: 1s; 
 	 z-index: 10; 
 	 transform: rotate(15deg);
-	
+	 width: 100px; 
+	height: 100px;
+	left: -130px;
 }
 
 .container .card:hover .fruit
 {
- 	 bottom: -160px; 
+ 	 bottom: 290px; 
  	z-index: 20;
 } 
 
