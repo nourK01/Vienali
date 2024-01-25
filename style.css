@@ -136,6 +136,18 @@ nav a.active
 	background: #ff2c30; 
 }
 
+#limo-1:before 
+{
+	background: #ffa404; 
+}
+#limo-2:before 
+{
+	background: #ffa404; 
+}
+#limo-3:before 
+{
+	background: #ffa404; 
+}
 .container .card:hover:before 
 { 
 clip-path: circle(300px at 80% -20% ); 
@@ -169,6 +181,18 @@ clip-path: circle(300px at 80% -20% );
 #bottle-1:after 
 { 
 	content: 'Grape';
+	}
+	#limo-1:after 
+{ 
+	content: 'mango';
+	}
+	#limo-2:after 
+{ 
+	content: 'mango';
+	}
+	#limo-3:after 
+{ 
+	content: 'mango';
 	}
 		#bottle-2:after 
 { 
@@ -232,6 +256,30 @@ clip-path: circle(300px at 80% -20% );
 	transform: translate(-50%,-50%) rotate(-25deg);
 	width: 270px; 
 } 
+.container .card .imgBx #limo1
+{ 
+	position: absolute; 
+	top: 30%; 
+	left: 48%; 
+	transform: translate(-50%,-50%) rotate(-25deg);
+	width: 270px; 
+} 
+.container .card .imgBx #limo2
+{ 
+	position: absolute; 
+	top: 30%; 
+	left: 48%; 
+	transform: translate(-50%,-50%) rotate(-25deg);
+	width: 270px; 
+} 
+.container .card .imgBx #limo3
+{ 
+	position: absolute; 
+	top: 30%; 
+	left: 48%; 
+	transform: translate(-50%,-50%) rotate(-25deg);
+	width: 270px; 
+} 
 .container .card .contentBx 
 { 
 	 position: absolute;
@@ -273,6 +321,15 @@ clip-path: circle(300px at 80% -20% );
  	scale:0.5;
  }
  #bottle2{
+	scale:0.5;
+}
+#limo1{
+	scale:0.5;
+}
+#limo2{
+	scale:0.5;
+}
+#limo3{
 	scale:0.5;
 }
 .container .card .description
