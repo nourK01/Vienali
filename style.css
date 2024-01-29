@@ -309,6 +309,10 @@ margin-top: 50px;
 
 	  padding-left: 2vw;
  }
+
+ .content__main h3{
+  font-size: 16;
+ }
 }
 
 
@@ -325,7 +329,9 @@ margin-top: 50px;
 
 		padding-left: 25%;
    }
-  
+   .content__main h3{
+    font-size: 16px;
+   }
   }
 .products-display .card {
     position: relative;
