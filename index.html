@@ -7,33 +7,84 @@
 	<title> Vienali </title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="script" type="text/css" href="script.js">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+		  <script src="  https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body>
 
 	
-	<nav id="navbar">
+<div class="container-fluid main">
 
+  <nav id="navbar" class="navbar navbar-default">
+    <div  class="container-fluid">
+     
+      <div  class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <div  id="nav-item1" class="navbar-brand"  id="logo">
+            <img src="vienali-logo.png" alt="Logo">
+         </div>
+    
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul id="nav-ul"class="nav navbar-nav">
+          <li><a id="nav-item2" href="#">Home</a></li>
+          <li><a id="nav-item3" href="#">Products</a></li>
+          <li><a id="nav-item4" href="#">Product Description</a></li>
+          <li><a id="nav-item5" href="#">Aloe Vera Benefits</a></li>
+          <li><a id="nav-item6" href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      </div>
+   
+  </nav>
 
-     <div id="logo">
-        <img src="vienali-logo.png" alt="Logo">
-     </div>
-
-	<div id="options">
-		<a href="#"> Home </a>
-		<a href="#"> Products </a>
-		<a href="#"> Product Description </a>
-		<a href="#"> Aloe Vera Benefits </a>
-		<a href="#"> Contact</a>
-		
-	
+  <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
+    
+    <div class="carousel-inner" role="listbox">
+      <div class="item active background a"></div>
+      <div class="item background b"></div>
+      <div class="item background c"></div>
+      <div class="item background d"></div>
+      <div class="item background e"></div>
+      <div class="item background f"></div>
+      <div class="item background g"></div>
     </div>
+  </div>
+  
+  <div class="covertext">
+    <div class="col-lg-10" style="float:none; margin:0 auto;">
+      <h1 class="title">VIENALI</h1>
+      <h3 class="subtitle">Refresh Your Spirit with Nature’s Essence - Aloe Vera and Fruit, A Symphony of Flavor in Every Sip!</h3>
+    </div>
+    <div class="col-xs-12 explore">
+    
+     <a href="#"><button type="button" id="btn">EXPLORE</button></a></div>
+  </div>
+  
+</div>
 
+<script>
+  /* When your mouse cursor enters the background, the fading won't pause and keeps playing */
+  $('.carousel').carousel({
+    pause: "false" /* Change to true to make it paused when your mouse cursor enters the background */
+  });
+  
+</script>
 
-    </nav>
-
-
-	<div class="container"> 
+	<section id="home">
+		<h1>home</h1>
+	</section>
+	
+<section id="products">
+	<div class="products-display"> 
 		
 
 		<div id="can-1" class="card">
@@ -179,34 +230,300 @@
    </div>
    </div>
 </div>
-
-    <script type="text/javascript">
-    	let marker = document.querySelector('#indicator'); 
-		let nav = document.querySelector('nav');
-		let item = document.querySelectorAll('nav a'); 
-		nav.onclick = function(){
-		marker.classList.toggle('change'); }
-
-		function indicator(e){
-		 marker.style.left = e.offsetLeft + 'px';
-		 marker.style.width = e.offsetWidth + 'px';
-		 marker.style.display = "block"; 
-		 marker.style.filter = 'hue-rotate(' + Math.random() *360 +'deg)'} 
-
-		 item.forEach(link => {
-		 link.addEventListener("click", (e) => {indicator(e.target); } )})
-
-		 function addActiveClass(){
-		 item.forEach((i) => 
-		 i.classList.remove('active'));
-		 this.classList.add('active'); } 
-
-		 item.forEach((i) =>
-		 i.addEventListener('click', addActiveClass ));
+</section>
 
 
 
+<div id="Product-Description" class="carousel">
+    <div class="carousel__control">
+    </div>
+    <div class="carousel__stage">
+        <div class="spinner spinner--left">
+            <div class="spinner__face js-active" data-bg="#64843d">
+                <div class="content" data-type="can1">
+                    <div class="content__left">
+                    </div>
+                    <div class="content__right">
+                        <div class="content__main">
+                            <h1> – Ingredients –</h1> <br>
+                            <h3>Water, sugar, aloe vera (9%), aloe vera gel, white grape juice concentrate, sucralose, citric acid, trisodium citrate,calcium lactate, gelling agent: gellan gum, grape flavor.</h3>
+		                	<br> <h3>240 ml</h3>
+                        </div>
+                        <h3 class="content__index">01</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="spinner__face" data-bg="#801814">
+                <div class="content" data-type="can2">
+                    <div class="content__left">
+                      
+                    </div>
+                    <div class="content__right">
+                        <div class="content__main">
+                            <h1> – Ingredients –</h1> <br>
+                            <h3> Water, sugar, aloe vera (9%), aloe vera gel, sucralose, citric acid, trisodium citrate, calcium lactate, vitamin c, gelling agent: gellan gum, pomegranate flavor, colouring: β-carotene, carmine color.</h3>
+                            <br> <h3>240 ml</h3>
+                        </div>
+                        <h3 class="content__index">02</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="spinner__face" data-bg="#142545">
+                <div class="content" data-type="can3">
+                    <div class="content__left">
+                    </div>
+                    <div class="content__right">
+                        <div class="content__main">
+                            <h1> – Ingredients –</h1> <br>
+                            <h3>Purified water, Aloe vera gel, Blueberry extract 2% (67 Brix), Sugar, Acidity regulators (Citric acid, Calcium lactate,   Sodium citrate), Gellan gum,  Vitamin C , Blueberry flavor.</h3>
+                            </h3>
+                            <br> <h3>240 ml</h3>
+                        </div>
+                        <h3 class="content__index">03</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="spinner__face" data-bg="#5cb616">
+                <div class="content" data-type="bottle1">
+                    <div class="content__left">
+                    </div>
+                    <div class="content__right">
+                        <div class="content__main">
+                            <h1> – Ingredients –</h1> <br>
+                            <h3> Water, Extract Aloe Vera (%19), Glucose, Grape juice with Grape juice concentrate, Sugar, Aloe Vera (%9), Acidity regulators: Citric acid and sodium citrate, Thickeners: Calcium lactate, Gellan Gum, Xantan gum, Flavour, Sweetener.</h3>
+                            <br> <h3>500 ml</h3>
+                        </div>
+                        <h3 class="content__index">04</h3>
+                    </div>
+                </div>
+            </div>
 
-    </script>
+            <div class="spinner__face" data-bg="#e43a3e">
+                <div class="content" data-type="bottle2">
+                    <div class="content__left">
+                    </div>
+                    <div class="content__right">
+                        <div class="content__main">
+                            <h1> – Ingredients –</h1> <br>
+                            <h3> Water, Extract Aloe Vera (%19), Glucose, Grape juice with Grape juice concentrate, Sugar, Strawberry Puree, Aloe Vera (%9), Acidity regulators: Citric acid and sodium citrate, Thickeners: Calcium lactate, Gellan Gum, Xantan gum, Flavour,Sweetener.</h3>
+                            <br> <h3>500 ml</h3>
+                        </div>
+                        <h3 class="content__index">05</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spinner__face" data-bg="#e56c05">
+                <div class="content" data-type="limo1">
+                    <div class="content__left">
+                    </div>
+                    <div class="content__right">
+                        <div class="content__main">
+                            <h1> – Ingredients –</h1> <br>
+                            <h3>  Water, sugar, carbon dioxide, acid: citric acid, stabiliser (E414,E444,E445), antioxidant ascorbic acid, colouring (E160a, E160e), flavour.   </h3>
+                            <br> <h3>1.5 l</h3>
+                        </div>
+                        <h3 class="content__index">06</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spinner__face" data-bg="#aa512a">
+                <div class="content" data-type="limo2">
+                    <div class="content__left">
+                        
+                    </div>
+                    <div class="content__right">
+                        <div class="content__main">
+                            <h1> – Ingredients –</h1> <br>
+                            <h3>   Water, sugar, carbon dioxide, peach juice from concentrate(1,1%), acid: citric acid, natural flavouring, stabiliser (E414, E444), preservative: E211, colour E150c. </h3>
+                            <br> <h3>1.5 l</h3>
+                        </div>
+                        <h3 class="content__index">07</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spinner__face" data-bg="#761d22">
+                <div class="content" data-type="limo3">
+                    <div class="content__left">
+                    
+                    </div>
+                    <div class="content__right">
+                        <div class="content__main">
+                            <h1> – Ingredients –</h1> <br>
+                            <h3> Water, sugar, carbon dioxide, acid: citric acid, coloring foodstuffs (concentrates of black currant, hibiscus, carrot), colouring 150d, flavour.   </h3>
+                            <br> <h3>1.5 l</h3>
+                        </div>
+                        <h3 class="content__index">08</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Poor man's preloader -->
+<div style="height: 0; width: 0; overflow: hidden">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/peru.jpg">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/canada.jpg"><img src="can1art.jpg"></div>
+
+<script>
+    let activeIndex = 0;
+let limit = 0;
+let disabled = false;
+let $stage;
+let $controls;
+let canvas = false;
+
+const SPIN_FORWARD_CLASS = 'js-spin-fwd';
+const SPIN_BACKWARD_CLASS = 'js-spin-bwd';
+const DISABLE_TRANSITIONS_CLASS = 'js-transitions-disabled';
+const SPIN_DUR = 1000;
+
+const appendControls = () => {
+  for (let i = 0; i < limit; i++) {
+    $('.carousel__control').append(`<a href="#" data-index="${i}"></a>`);
+  }
+  let height = $('.carousel__control').children().last().outerHeight();
+
+  $('.carousel__control').css('height', 30 + limit * height);
+  $controls = $('.carousel__control').children();
+  $controls.eq(activeIndex).addClass('active');
+};
+
+const setIndexes = () => {
+  $('.spinner').children().each((i, el) => {
+    $(el).attr('data-index', i);
+    limit++;
+  });
+};
+
+const duplicateSpinner = () => {
+  const $el = $('.spinner').parent();
+  const html = $('.spinner').parent().html();
+  $el.append(html);
+  $('.spinner').last().addClass('spinner--right');
+  $('.spinner--right').removeClass('spinner--left');
+};
+
+const paintFaces = () => {
+  $('.spinner__face').each((i, el) => {
+    const $el = $(el);
+    let color = $(el).attr('data-bg');
+    $el.children().css('backgroundImage', `url(${getBase64PixelByColor(color)})`);
+  });
+};
+
+const getBase64PixelByColor = (hex) => {
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.height = 1;
+    canvas.width = 1;
+  }
+  if (canvas.getContext) {
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = hex;
+    ctx.fillRect(0, 0, 1, 1);
+    return canvas.toDataURL();
+  }
+  return false;
+};
+
+const prepareDom = () => {
+  setIndexes();
+  paintFaces();
+  duplicateSpinner();
+  appendControls();
+};
+
+const spin = (inc = 1) => {
+  if (disabled) return;
+  if (!inc) return;
+  activeIndex += inc;
+  disabled = true;
+
+  if (activeIndex >= limit) {
+    activeIndex = 0;
+  }
+
+  if (activeIndex < 0) {
+    activeIndex = limit - 1;
+  }
+
+  const $activeEls = $('.spinner__face.js-active');
+  const $nextEls = $(`.spinner__face[data-index=${activeIndex}]`);
+  $nextEls.addClass('js-next');
+
+  if (inc > 0) {
+    $stage.addClass(SPIN_FORWARD_CLASS);
+  } else {
+    $stage.addClass(SPIN_BACKWARD_CLASS);
+  }
+
+  $controls.removeClass('active');
+  $controls.eq(activeIndex).addClass('active');
+
+  setTimeout(() => {
+    spinCallback(inc);
+  }, SPIN_DUR, inc);
+};
+
+const spinCallback = (inc) => {
+  $('.js-active').removeClass('js-active');
+  $('.js-next').removeClass('js-next').addClass('js-active');
+  $stage
+    .addClass(DISABLE_TRANSITIONS_CLASS)
+    .removeClass(SPIN_FORWARD_CLASS)
+    .removeClass(SPIN_BACKWARD_CLASS);
+
+  $('.js-active').each((i, el) => {
+    const $el = $(el);
+    $el.prependTo($el.parent());
+  });
+  setTimeout(() => {
+    $stage.removeClass(DISABLE_TRANSITIONS_CLASS);
+    disabled = false;
+  }, 100);
+};
+
+const attachListeners = () => {
+  document.onkeyup = (e) => {
+    switch (e.keyCode) {
+      case 38:
+        spin(-1);
+        break;
+      case 40:
+        spin(1);
+        break;
+    }
+  };
+
+  $controls.on('click', (e) => {
+    e.preventDefault();
+    if (disabled) return;
+    const $el = $(e.target);
+    const toIndex = parseInt($el.attr('data-index'), 10);
+    spin(toIndex - activeIndex);
+  });
+};
+
+const assignEls = () => {
+  $stage = $('.carousel__stage');
+};
+
+const init = () => {
+  assignEls();
+  prepareDom();
+  attachListeners();
+};
+
+$(document).ready(() => {
+  init();
+});
+
+</script>
+
+
 </body>
 </html>

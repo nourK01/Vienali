@@ -1,6 +1,258 @@
 @import url('https://fonts.googleapis.com/css?family,Poppins:200,300,400,500,600,700,800,900&display=swap'); 
 
 
+/* this css is for the navbar  */
+.container-fluid.main {
+    position: relative;
+    padding: 0;
+  }
+  
+  #navbar {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar appears on top */
+    border: none;
+  }
+  #myNavbar{
+    border: none;
+    border-color: transparent;
+    
+  }
+  #nav-item1{
+    margin-bottom: 18px;
+  }
+    
+  #nav-ul{
+    margin-top: 10px;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+      margin-right: -15px;
+       background: #5f826778;
+       float: right;
+       border-radius: 10px;
+       box-shadow:1px 1px 1px 1px white;
+  }
+  
+ 
+
+  
+  
+
+  #nav-item2, #nav-item3, #nav-item4, #nav-item5, #nav-item6{
+    font-size: 15px;
+    background: transparent;
+    border: none;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  #nav-item2:before, #nav-item3:before, #nav-item4:before, #nav-item5:before, #nav-item6:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #286c33;
+    transition: 0.5s ease;
+  }
+
+  #nav-item2:hover, #nav-item3:hover, #nav-item4:hover, #nav-item5:hover, #nav-item6:hover{
+    color:  #286c33;
+    transition-delay: 0.5s;
+  }
+  #nav-item2:hover::before, #nav-item3:hover::before, #nav-item4:hover::before, #nav-item5:hover::before, #nav-item6:hover::before {
+    width: 100%;
+  }
+  
+  #nav-item2::after, #nav-item3::after, #nav-item4::after, #nav-item5::after, #nav-item6::after  {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    transition: 0.4s ease;
+    z-index: -1;
+  }
+  
+  #nav-item2:hover::after, #nav-item3:hover::after, #nav-item4:hover::after, #nav-item5:hover::after, #nav-item6:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+  }
+  
+
+.navbar-default .navbar-brand {
+  font-family: Verdana;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+.carousel .background {
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+  }
+
+@media (max-width:991px) {
+  .carousel .background {
+    background-size: cover; /* To make the background image looks good */
+  }
+}
+
+.carousel .background.a {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("blueberry.jfif");
+}
+
+.carousel .background.b {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Pomegranate.jfif");
+}
+
+.carousel .background.c {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("cherry.jfif");
+}
+.carousel .background.d {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Grape.jfif");
+  }
+  .carousel .background.e {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mango.jfif");
+  }
+  .carousel .background.f {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mango.jfif");
+  }
+  .carousel .background.g {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("strawberry.jfif");
+  }
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition: opacity 0.5s; /* The 0.5s describes the duration to make the opacity from 0 to 1 */
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+/* CSS Hack to trigger GPU for smooth transition */
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* CSS Hack to trigger GPU for smooth transition */
+
+.covertext {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    right: 0px;
+  }
+
+.title {
+  font-family: Verdana;
+  font-weight: 600;
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: Verdana;
+  font-size: 23px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.explore {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#btn
+{
+  width: 150px;
+  height: 60px;
+  border: 3px solid #e30613;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+  font-family: 'Montserrat', sans-serif;
+  color: #e30613;
+}
+
+#btn:hover {
+  background: #e30613;
+  color: white;
+  font-size: 1.5em;
+}
+.collapse .navbar-collapse {
+  background-color: #ffffff8f;
+}
+
+
+/* this css is for the cards: */
+
+
 *
 { 
 	margin: 0;
@@ -8,116 +260,97 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; 
 }
-
-body
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-color: #151517;
+.card .contentBx h2, 
+.card .description p {
+    font-family:'Poppins', sans-serif; 
 }
-
-nav
-{
-	position: absolute;
-    top: 0;
-	display: flex;
-	justify-content: space-between;
-	column-gap: 30px;
-	background-color: #222327;
-	padding: 15px 60px;
-	width: 100vw;
-}
-
-nav a
-{
-	position: relative;
-	text-decoration: none;
-	color: #999;
-	font-size: 1.5em;
-	z-index: 2;
-	height: 75px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0 30px;
-	transition: 0.5s;
-}
-nav a.active
-{
-	color: #222327;
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 
 
-#options
-{
-    display: flex;
+
+#home {
+    background-color: white;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
-.container 
+#products {
+    background-color: white;
+padding-left: 10vw;
+margin-top: 50px;
+}
+
+
+.products-display 
 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
-	column-gap: 30px;
-  justify-content: space-between;
-
+	column-gap: 10px;
+	
+	
 } 
-.container .card
- { 
-    width: calc(33.333% - 20px);
-     margin-bottom: 20px;
-  } 
 
   @media screen and (max-width: 768px) {
    
-	.container {
+	.products-display {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		
 	  }
+	  #products{
 
-
- 
+	  padding-left: 2vw;
+ }
 }
 
-@media screen and (max-width: 375px) {
-    .container .card {
+
+@media (max-width:600px) {
+	.products-display .card {
 
         margin-top: 50px;
     }
-	.container {
+	.products-display {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 	  }
-	
+	  #products{
 
+		padding-left: 25%;
+   }
+  
+  }
+.products-display .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: 200;
 }
-.container .card
- { 
- 	position: relative;
- 	width: 320px ; 
- 	height: 450px ; 
- 	background: #232323; 
-	border-radius: 20px ; 
-	overflow: hidden; 
-	flex-grow: 1;
-	flex-basis: 200;
 
-} 
-.container .card:before 
-{ 
-	content: ''; 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	width: 100%; 
-	height: 100%;
-	background: #487027; 
-	clip-path: circle(150px at 80% 20% ); 
-	transition: 0.5s ease-in-out;
-} 
+.products-display .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #487027;
+    clip-path: circle(550px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+/* ... rest of your CSS ... */
 
 #can-2:before 
 {
@@ -148,18 +381,18 @@ nav a.active
 {
 	background: #91262c; 
 }
-.container .card:hover:before 
+.products-display .card:hover:before 
 { 
 clip-path: circle(300px at 80% -20% ); 
 } 
 
 
-.container .card:after 
+.products-display .card:after 
 { 
 	position: absolute; 
 	align-items: center;
 	top: 35% ; 
-	left: -20% ; 
+	left: -10% ; 
 	font-size: 9em ; 
 	font-weight: 800; 
 	font-style: italic; 
@@ -198,20 +431,20 @@ clip-path: circle(300px at 80% -20% );
 		white-space: pre;
 		font-size: 9em ;
 		align-items: center;
-		left: -5%;
+		left: -2%;
 		top: 20% ;
 		}
 	#limo-1:after 
 { 
 	content: 'Mango';
 	font-size: 8em ;
-	left: -15%;
+	left: -7%;
 	}
 	#limo-2:after 
 { 
 	content: 'Peach';
 	font-size: 8.2em ;
-	left: -10%;
+	left: -4%;
 	}
 	#limo-3:after 
 { 
@@ -221,7 +454,7 @@ clip-path: circle(300px at 80% -20% );
 
 
 	
-.container .card .imgBx
+.products-display .card .imgBx
  { 
 	position: absolute; 
 	top: 50% ; 
@@ -232,13 +465,13 @@ clip-path: circle(300px at 80% -20% );
 	transition: 0.5s; 
 } 
 
-.container .card:hover .imgBx
+.products-display .card:hover .imgBx
  { 
  	top: 0% ; 
  	transform: translateY(0%); 
  	} 
 
- .container .card .imgBx #can1 
+ .products-display .card .imgBx #can1 
  { 
  	position: absolute; 
  	top: 30%; 
@@ -246,7 +479,7 @@ clip-path: circle(300px at 80% -20% );
  	transform: translate(-50%,-50%) rotate(-25deg);
  	width: 270px; 
 } 
- .container .card .imgBx #can2
+ .products-display .card .imgBx #can2
  { 
  	position: absolute; 
  	top: 30%; 
@@ -254,16 +487,18 @@ clip-path: circle(300px at 80% -20% );
  	transform: translate(-50%,-50%) rotate(-25deg);
  	width: 270px; 
 } 
-.container .card .imgBx #can3
+.products-display .card .imgBx #can3
 { 
+
+	
 	position: absolute; 
-	top: 30%; 
+	top: 35%; 
 	left: 48%; 
 	transform: translate(-11%,15%) rotate(-25deg);
 	width: 270px; 
 } 
 
- .container .card .imgBx #bottle1 
+ .products-display .card .imgBx #bottle1 
  { 
  	position: absolute; 
  	top: 30%; 
@@ -271,7 +506,7 @@ clip-path: circle(300px at 80% -20% );
  	transform: translate(-50%,-50%) rotate(-25deg);
  	width: 270px; 
 } 
-.container .card .imgBx #bottle2 
+.products-display .card .imgBx #bottle2 
 { 
 	position: absolute; 
 	top: 30%; 
@@ -279,7 +514,7 @@ clip-path: circle(300px at 80% -20% );
 	transform: translate(-50%,-50%) rotate(-25deg);
 	width: 270px; 
 } 
-.container .card .imgBx #limo1
+.products-display .card .imgBx #limo1
 { 
 	position: absolute; 
 	top: 30%; 
@@ -287,7 +522,7 @@ clip-path: circle(300px at 80% -20% );
 	transform: translate(-55%,-59%) rotate(-35deg);
 	width: 270px; 
 } 
-.container .card .imgBx #limo2
+.products-display .card .imgBx #limo2
 { 
 	position: absolute; 
 	top: 30%; 
@@ -295,7 +530,7 @@ clip-path: circle(300px at 80% -20% );
 	transform: translate(-55%,-59%) rotate(-35deg);
 	width: 270px; 
 } 
-.container .card .imgBx #limo3
+.products-display .card .imgBx #limo3
 { 
 	position: absolute; 
 	top: 30%; 
@@ -303,7 +538,7 @@ clip-path: circle(300px at 80% -20% );
 	transform: translate(-55%,-59%) rotate(-35deg);
 	width: 270px; 
 } 
-.container .card .contentBx 
+.products-display .card .contentBx 
 { 
 	 position: absolute;
 	 bottom: -100px; 
@@ -314,13 +549,15 @@ clip-path: circle(300px at 80% -20% );
 	 z-index: 10; 
 	 } 
 
-.container .card:hover .contentBx 
+.products-display .card:hover .contentBx 
  { 
  	height: 545px; 
  	z-index: 20;
 } 
-.container .card .contentBx h2
-{ 
+.products-display .card .contentBx h2
+
+{    margin-top: 0px;
+	 font-size: 25px;
 	font-weight: 600; 
 	letter-spacing: 1px; 
 	color: #fff;
@@ -344,7 +581,7 @@ clip-path: circle(300px at 80% -20% );
 }
 
 
-.container .card .description
+.products-display .card .description
 {
 	 position: absolute;
 	 bottom: -100px; 
@@ -359,13 +596,13 @@ clip-path: circle(300px at 80% -20% );
 	letter-spacing: 1px; 
 	color: #fff; 
 }
-.container .card:hover .description
+.products-display .card:hover .description
 {
  	height: 150px; 
  	z-index: 20;
 } 
 
-.container .card .fruit
+.products-display .card .fruit
 {
 	 position: absolute;
 	 bottom: -10px;
@@ -377,7 +614,7 @@ clip-path: circle(300px at 80% -20% );
 	left: -130px;
 }
 
-.container .card:hover .fruit
+.products-display .card:hover .fruit
 {
  	 bottom: 290px; 
  	z-index: 20;
@@ -388,3 +625,272 @@ clip-path: circle(300px at 80% -20% );
 		margin-left: 20px;
 	  
 }
+
+
+/* this css if for the carousel: */
+
+
+#Product-Description{
+	margin-top: 50px;
+}
+.js-transitions-disabled * {
+  transition: none !important;
+}
+.carousel {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  perspective: 50vw;
+  perspective-origin: 50% 50%;
+}
+.carousel__control {
+  position: absolute;
+  height: 160px;
+  width: 40px;
+  background: #fff;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+.carousel__control a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 75%;
+  box-sizing: border-box;
+}
+.carousel__control a:hover:before {
+  background-color: rgba(0,0,0,0.4);
+}
+.carousel__control a.active:before,
+.carousel__control a.active:hover:before {
+  background-color: rgba(0,0,0,0.6);
+}
+.carousel__control a:first-child {
+  margin-top: 15px;
+}
+.carousel__control a:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  padding-top: 25%;
+  width: 25%;
+  background: rgba(0,0,0,0.2);
+  content: '';
+  display: block;
+  margin-top: -12.5%;
+}
+.carousel__stage {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-50vh + 20px));
+}
+.spinner {
+  position: absolute;
+  width: calc(50vw - (29px));
+  height: calc(100vh - 40px);
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  margin: auto;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  backface-visibility: hidden;
+  transform-origin: 50% 50%;
+  transform: rotateX(0);
+}
+.js-spin-fwd .spinner {
+  transform: rotateX(-90deg);
+}
+.js-spin-bwd .spinner {
+  transform: rotateX(90deg);
+}
+.js-spin-fwd .spinner--right {
+  transform: rotateX(90deg);
+}
+.js-spin-bwd .spinner--right {
+  transform: rotateX(-90deg);
+}
+.spinner--right {
+  right: 0;
+  left: auto;
+}
+.spinner__face {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.spinner__face.js-next {
+  display: block;
+  transform: rotateX(90deg) translateZ(calc(50vh - 20px));
+}
+.spinner--right .spinner__face.js-next {
+  transform: rotateX(270deg) translateZ(calc(50vh - 20px));
+}
+.js-spin-bwd .spinner__face.js-next {
+  transform: rotateX(-90deg) translateZ(calc(50vh - 20px));
+}
+.js-spin-bwd .spinner--right .spinner__face.js-next {
+  transform: rotateX(-270deg) translateZ(calc(50vh - 20px));
+}
+.js-active {
+  display: block;
+  transform: translateZ(calc(50vh - 20px));
+}
+.content {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: 0;
+}
+.spinner--right .content {
+  left: -100%;
+}
+.content__left,
+.content__right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.content__right {
+  right: 0;
+  left: auto;
+}
+.content__left {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content__left:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.content__left span {
+  font-size: 1vw;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+  font-family: Merriweather;
+}
+.content__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content__right .content__main {
+  position: absolute;
+  font-family: Merriweather, serif;
+  text-align: left;
+  color: #fff;
+  font-size: 1.3vw;
+  padding: 0 8vw;
+  line-height: 1.65;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.8;
+}
+.content__right .content__main p:last-child {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85em;
+}
+.content__right .content__index {
+  font-size: 30vh;
+  position: absolute;
+  right: -1vh;
+  bottom: 0vh;
+  opacity: 0.04;
+  font-family: oswald;
+  color: #fff;
+}
+[data-type="can1"] .content__left {
+  background-image: url("can1art.jpg");
+}
+.spinner--right [data-type="can1"] .content__left {
+  background-image: none;
+}
+
+
+[data-type="can2"] .content__left {
+  background-image: url("can2art.jpg");
+}
+.spinner--right [data-type="can2"] .content__left {
+  background-image: none;
+}
+
+
+[data-type="can3"] .content__left {
+  background-image: url("can3art.jpg");
+}
+.spinner--right [data-type="can3"] .content__left {
+  background-image: none;
+}
+
+
+[data-type="bottle1"] .content__left {
+  background-image: url("bottle1art.jpg");
+}
+.spinner--right [data-type="bottle1"] .content__left {
+  background-image: none;
+}
+
+
+
+[data-type="bottle2"] .content__left {
+    background-image: url("bottle2art.jpg");
+  }
+  .spinner--right [data-type="bottle2"] .content__left {
+    background-image: none;
+  }
+
+
+
+[data-type="limo1"] .content__left {
+  background-image: url("limo1art.jpg");
+}
+.spinner--right [data-type="limo1"] .content__left {
+  background-image: none;
+}  
+
+
+
+[data-type="limo2"] .content__left {
+    background-image: url("limo2art.jpg");
+  }
+  .spinner--right [data-type="limo2"] .content__left {
+    background-image: none;
+  }
+
+
+
+  [data-type="limo3"] .content__left {
+    background-image: url("limo3art.jpg");
+  }
+  .spinner--right [data-type="limo3"] .content__left {
+    background-image: none;
+  }
+  
+  
+
+
+  
