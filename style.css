@@ -327,7 +327,9 @@ margin-top: 50px;
 	  }
 	  #products{
 
-		padding-left: 15%;
+		display: flex;
+    align-items: center;
+    padding: none;
    }
    .content__main h3{
     font-size: 16px;
