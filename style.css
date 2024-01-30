@@ -148,13 +148,13 @@
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Pomegranate.jfif");
 }
 
-.carousel .background.c {
+/* .carousel .background.c {
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("cherry.jfif");
-}
+} */
 .carousel .background.d {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Grape.jfif");
   }
-  .carousel .background.e {
+  /* .carousel .background.e {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mango.jfif");
   }
   .carousel .background.f {
@@ -162,7 +162,7 @@
   }
   .carousel .background.g {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("strawberry.jfif");
-  }
+  } */
 
 .carousel-fade .carousel-inner .item {
   opacity: 0;
@@ -327,7 +327,7 @@ margin-top: 50px;
 	  }
 	  #products{
 
-		padding-left: 25%;
+		padding-left: 15%;
    }
    .content__main h3{
     font-size: 16px;
