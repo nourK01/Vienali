@@ -2,7 +2,7 @@
 
 html {
  
-  height: 100vh;
+  height: 100%;
   padding: 1em;
   font-size: 112.5%;
   color: #124;
@@ -1494,4 +1494,13 @@ padding-bottom: 100px;
           border-radius: 50%;
         }
         
+        }
+
+        @media (max-width:800px) {
+          #logistics{
+            background-size: cover; /* To make the background image looks good */
+          }
+          #products{
+            background-size: cover; /* To make the background image looks good */
+          }
         }
