@@ -581,7 +581,7 @@ $(document).ready(() => {
     <h1 id="h1-contact-us">Contact us</h1>
     <p id="p-contact-us ">Get in touch!</p>
     
-    <form id="contact-form" method="post" action="send_email.php">
+    <form id="contact-form" onsubmit="sendEmail()">
       <label for="name">Full name</label>
   <input type="text" id="name" name="name" placeholder="Your Full Name" required>
       <label for="email">Email Address</label>
@@ -597,5 +597,24 @@ $(document).ready(() => {
 </div>
 
   </div>
+
+  <script src="https://smtpjs.com/v3/smtp.js" >  </script>
+  <script>
+    function sendEmail(){
+       Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "username",
+          Password : "password",
+          To : 'them@website.com',
+          From : "you@isp.com",
+          Subject : "This is the subject",
+          Body : "And this is the body"
+      }).then(
+        message => alert(message)
+      );
+    }
+
+  </script>
+
 </body>
 </html>
