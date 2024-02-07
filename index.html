@@ -39,7 +39,7 @@
           <li><a id="nav-item4" href="#Product-Description">Product Description</a></li>
           <li><a id="nav-item5" href="#">Aloe Vera Benefits</a></li>
           <li><a id="nav-item5" href="#logistics">Logistics</a></li>
-          <li><a id="nav-item6" href="#">Contact Us</a></li>
+          <li><a id="nav-item6" href="#contact-us">Contact Us</a></li>
         </ul>
       </div>
       </div>
@@ -579,23 +579,22 @@ $(document).ready(() => {
      
     
     <h1 id="h1-contact-us">Contact us</h1>
-    <p id="p-contact-us ">Planning to visit Indonesia soon? Get insider tips on where to go, things to do and find best deals for your next adventure.</p>
+    <p id="p-contact-us ">Get in touch!</p>
     
-    <form id="contact-form" method="post">
+    <form id="contact-form" method="post" action="send_email.php">
       <label for="name">Full name</label>
   <input type="text" id="name" name="name" placeholder="Your Full Name" required>
       <label for="email">Email Address</label>
   <input type="email" id="email" name="email" placeholder="Your Email Address" required>
       <label for="message">Message</label>
   <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
-      <!--<a href="javascript:void(0)">--><button id="button-contact-us"type="submit" id="submit" name="submit">Send</button><!--</a>-->
+<button id="button-contact-us"type="submit" id="submit" name="submit">Send</button><!--</a>-->
   
 </form>
 <div id="error"></div>
 <div id="success-msg"></div>
   </div>
 </div>
-
 
   </div>
 </body>
