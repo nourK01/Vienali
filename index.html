@@ -581,7 +581,7 @@ $(document).ready(() => {
     <h1 id="h1-contact-us">Contact us</h1>
     <p id="p-contact-us ">Get in touch!</p>
     
-    <form id="contact-form" onsubmit="sendEmail()">
+    <form id="contact-form" onsubmit="sendEmail(); reset(); return false;">
       <label for="name">Full name</label>
   <input type="text" id="name" name="name" placeholder="Your Full Name" required>
       <label for="email">Email Address</label>
