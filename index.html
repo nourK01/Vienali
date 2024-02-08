@@ -602,12 +602,12 @@ $(document).ready(() => {
   <script>
     function sendEmail(){
        Email.send({
-          Host : "smtp.elasticemail.com",
-          Username : "username",
-          Password : "password",
-          To : 'them@website.com',
-          From : "you@isp.com",
-          Subject : "This is the subject",
+          Host : "smtp.gmail.com",
+          Username : "nourkachmar@gmail.com",
+          Password : "123Bffs123!",
+          To : 'nourkachmar@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "New Contact from Vienali",
           Body : "And this is the body"
       }).then(
         message => alert(message)
