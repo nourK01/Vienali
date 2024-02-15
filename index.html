@@ -77,9 +77,28 @@
     pause: "false" /* Change to true to make it paused when your mouse cursor enters the background */
   });
   
+
+  
 </script>
 
-	
+<script>
+  $(document).ready(function() {
+    const navLinks = $('nav a');
+
+    navLinks.on('click', function(e) {
+      e.preventDefault();
+
+      const targetId = $(this).attr('href').substring(1);
+      const targetElement = $('#' + targetId);
+
+      if (targetElement.length) {
+        $('html, body').animate({
+          scrollTop: targetElement.offset().top
+        }, 1000);
+      }
+    });
+  });
+</script>
 
   <!-- <div class="bg1"></div> -->
 <section id="products">
@@ -572,49 +591,32 @@ $(document).ready(() => {
 
 <div class="contact-container">
   <div class="left-col">
-   
   </div>
-  <div class="right-col">
-  
-     
-    
+  <div class="right-col"> 
     <h1 id="h1-contact-us">Contact us</h1>
     <p id="p-contact-us ">Get in touch!!</p>
     
-    <form id="contact-form" onsubmit="sendEmail(); reset(); return false;">
-      <label for="name">Full name</label>
-  <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-      <label for="email">Email Address</label>
-  <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-      <label for="message">Message</label>
-  <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
-<button id="button-contact-us"type="submit" id="submit" name="submit">Send</button><!--</a>-->
-  
+    <form id="contact-form" onsubmit="submitForm(); return false;">
+    <label for="name">Full name</label>
+    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+    <label for="message">Message</label>
+    <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
+
+    <button type="submit" id="submit">Send</button>
 </form>
+
 <div id="error"></div>
 <div id="success-msg"></div>
   </div>
 </div>
 
   </div>
-
-  <script src="https://smtpjs.com/v3/smtp.js" >  </script>
-  <script>
-    function sendEmail(){
-       Email.send({
-          Host : "smtp.gmail.com",
-          Username : "nourkachmar@gmail.com",
-          Password : "123Bffs123!",
-          To : 'nourkachmar@gmail.com',
-          From : document.getElementById("email").value,
-          Subject : "New Contact from Vienali",
-          Body : "And this is the body"
-      }).then(
-        message => alert(message)
-      );
-    }
-
+  <script src="https://smtpjs.com/v3/smtp.js">
   </script>
-
+  <script src="email.js"></script>
 </body>
 </html>
